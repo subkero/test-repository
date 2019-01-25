@@ -4,13 +4,15 @@
 
 import requests, csv
 
-
 # Next up we need to make the API call to retrieve the data
+payload={}
 
-payload={'appKey':"93b8237f9d7f487c8e08d08fbef51400eb4d1073e9d549b9bc2821bdf13c73d2",
-'apiKey':"783ff6a8d19744f6a05a7e61e7bbf9b21db3b39f44e74146b338bde4b2a15aa2",
-'macAddress':"C0:21:0D:1F:04:EC",
-'urlBase':"https://api.ambientweather.net/v1/devices/"}
+# import secrets and save to payload dict
+with open("test-secrets.py", "rt", newline='') as csvfile:
+    kreader = csv.reader(csvfile, delimiter=' ', quotechar='"')
+    for row in kreader:
+        payload[row[0]]=row[2]
+    print("Secrets imported!")
 
 #extract correct url
 
@@ -73,5 +75,6 @@ def write_csv_file(nested_table, file_name, file_delimiter):
         for row in nested_table:
             csv_writer.writerow(row)
     print("File successfully made!")
-    
+
+
 write_csv_file(data_nestList,'Library_weather.csv',',') # call function
