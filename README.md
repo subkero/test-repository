@@ -12,5 +12,5 @@ This app uses the 'requests' and 'csv' modules, which if not already installed m
 <br>
 The app also makes a call for "test-secrets.py" a user-created json file containing the access-key and macaddress for the weather station. (These keys must be individually obtained from Chapel Hill library staff).
 
- <h4>License and author info<h4>
+ <h4>License and author info</h4>
 Code written by Keron Subero and falls under General Public License -- GPLv3 <https://www.gnu.org/licenses/gpl-3.0.en.html>. Any questions please search me out and send me a message on LinkedIn.
