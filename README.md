@@ -8,7 +8,7 @@ This is a small/toy app which queries the weather station housed on top of the C
 The app is written in python and should run similarly to any other python script by using for instance the "$>python Test.py" command in Terminal on any Mac or Linux machine.
 
 <h3>How to set up the dev environment</h3>
-This app uses the 'requests' and 'csv' modules, which if not already installed must first be installed into your python package, using for example "$>pip install requests csv" or "$>conda install requests csv" for pip/anaconda package managers respectively. 
+This app uses the 'requests' and 'csv' modules, which if not already installed must first be installed into your python distro, using for example "$>pip install requests csv" or "$>conda install requests csv" for pip/anaconda package managers respectively. 
 <br>
 The app also makes a call for "test-secrets.py" a user-created json file containing the access-key and macaddress for the weather station. (These keys must be individually obtained from Chapel Hill library staff).
 
